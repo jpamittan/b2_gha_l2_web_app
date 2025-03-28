@@ -4,8 +4,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check files and directories
+        run: |
+          ls
+          pwd
       - name: Get code
         uses: actions/checkout@v4
+      - name: Check files and directories
+        run: |
+          ls
+          pwd
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
